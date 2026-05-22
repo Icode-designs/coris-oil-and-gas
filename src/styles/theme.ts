@@ -1,0 +1,82 @@
+// Coris Oil & Gas — Design System Tokens
+
+export const theme = {
+  colors: {
+    orange: "#F59D15",
+    orangeLight: "#FDB444",
+    orangeDark: "#D4860C",
+    purple: "#7A287A",
+    purpleLight: "#9B3D9B",
+    purpleDark: "#5C1D5C",
+    white: "#FFFFFF",
+    offWhite: "#F8F8F8",
+    lightGray: "#F2F2F2",
+    midGray: "#E5E5E5",
+    charcoal: "#1A1A2E",
+    charcoalLight: "#2D2D44",
+    darkBg: "#0F0F1C",
+    textPrimary: "#1A1A2E",
+    textSecondary: "#4A4A6A",
+    textMuted: "#8A8AAA",
+  },
+  gradients: {
+    orangePurple: "linear-gradient(135deg, #F59D15 0%, #7A287A 100%)",
+    orangeLight: "linear-gradient(135deg, #FDB444 0%, #F59D15 100%)",
+    purpleDark: "linear-gradient(135deg, #7A287A 0%, #3D103D 100%)",
+    darkHero: "linear-gradient(135deg, #0F0F1C 0%, #1A1A2E 50%, #2D1030 100%)",
+    cardHover: "linear-gradient(135deg, rgba(245,157,21,0.1) 0%, rgba(122,40,122,0.1) 100%)",
+  },
+  fonts: {
+    heading: "'Inter', 'Segoe UI', sans-serif",
+    body: "'Inter', 'Segoe UI', sans-serif",
+  },
+  fontSizes: {
+    xs: "0.75rem",
+    sm: "0.875rem",
+    base: "1rem",
+    lg: "1.125rem",
+    xl: "1.25rem",
+    "2xl": "1.5rem",
+    "3xl": "1.875rem",
+    "4xl": "2.25rem",
+    "5xl": "3rem",
+    "6xl": "3.75rem",
+    "7xl": "4.5rem",
+  },
+  spacing: {
+    section: "120px",
+    sectionMobile: "80px",
+  },
+  borderRadius: {
+    sm: "8px",
+    md: "12px",
+    lg: "16px",
+    xl: "24px",
+    "2xl": "32px",
+    full: "9999px",
+  },
+  shadows: {
+    sm: "0 2px 8px rgba(0,0,0,0.08)",
+    md: "0 4px 20px rgba(0,0,0,0.12)",
+    lg: "0 8px 40px rgba(0,0,0,0.16)",
+    xl: "0 20px 60px rgba(0,0,0,0.2)",
+    orange: "0 8px 30px rgba(245,157,21,0.3)",
+    purple: "0 8px 30px rgba(122,40,122,0.3)",
+    glow: "0 0 40px rgba(245,157,21,0.2)",
+  },
+  transitions: {
+    fast: "0.15s ease",
+    base: "0.3s ease",
+    slow: "0.5s ease",
+    spring: "0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+  },
+  breakpoints: {
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1280px",
+    "2xl": "1536px",
+  },
+} as const;
+
+export type Theme = typeof theme;
