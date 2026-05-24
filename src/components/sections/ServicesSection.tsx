@@ -4,7 +4,12 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { motion, useInView } from "framer-motion";
 import {
-  FaGasPump, FaTools, FaIndustry, FaTruck, FaFlask, FaShieldAlt,
+  FaGasPump,
+  FaTools,
+  FaIndustry,
+  FaTruck,
+  FaFlask,
+  FaShieldAlt,
 } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { theme } from "@/styles/theme";
@@ -23,7 +28,11 @@ const BgAccent = styled.div`
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(122, 40, 122, 0.06) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(122, 40, 122, 0.06) 0%,
+    transparent 70%
+  );
   pointer-events: none;
 `;
 
@@ -90,13 +99,17 @@ const Card = styled(motion.div)`
   transition: all 0.35s ease;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, ${theme.colors.orange}, ${theme.colors.purple});
+    background: linear-gradient(
+      90deg,
+      ${theme.colors.orange},
+      ${theme.colors.purple}
+    );
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.35s ease;
@@ -152,43 +165,51 @@ const CardLink = styled.div`
   font-size: 0.85rem;
   font-weight: 700;
   transition: gap 0.2s;
-  ${Card}:hover & { gap: 10px; }
+  ${Card}:hover & {
+    gap: 10px;
+  }
 `;
 
 const services = [
   {
     icon: <FaGasPump />,
-    color: "linear-gradient(135deg, rgba(245,157,21,0.15), rgba(245,157,21,0.05))",
+    color:
+      "linear-gradient(135deg, rgba(245,157,21,0.15), rgba(245,157,21,0.05))",
     title: "LPG Distribution",
     desc: "Reliable cooking gas delivery, cylinder refills, and bulk LPG supply for homes, restaurants, and industrial facilities across Port Harcourt.",
   },
   {
     icon: <FaTools />,
-    color: "linear-gradient(135deg, rgba(122,40,122,0.15), rgba(122,40,122,0.05))",
+    color:
+      "linear-gradient(135deg, rgba(122,40,122,0.15), rgba(122,40,122,0.05))",
     title: "Gas Installation & Fitting",
     desc: "Professional domestic and industrial gas piping, fittings, repairs, maintenance, and certified leak testing by licensed technicians.",
   },
   {
     icon: <FaShieldAlt />,
-    color: "linear-gradient(135deg, rgba(245,157,21,0.15), rgba(122,40,122,0.1))",
+    color:
+      "linear-gradient(135deg, rgba(245,157,21,0.15), rgba(122,40,122,0.1))",
     title: "Safety Equipment Sales",
     desc: "Leakage detectors, safety alarms, pressure regulators, flow meters, and full safety system installations that comply with Nigerian standards.",
   },
   {
     icon: <FaTruck />,
-    color: "linear-gradient(135deg, rgba(122,40,122,0.15), rgba(245,157,21,0.05))",
+    color:
+      "linear-gradient(135deg, rgba(122,40,122,0.15), rgba(245,157,21,0.05))",
     title: "Gas Tanks & Tanker Trucks",
     desc: "Sales of LPG storage tanks and tanker trucks for residential, commercial, and large-scale industrial operations.",
   },
   {
     icon: <FaIndustry />,
-    color: "linear-gradient(135deg, rgba(245,157,21,0.1), rgba(122,40,122,0.15))",
+    color:
+      "linear-gradient(135deg, rgba(245,157,21,0.1), rgba(122,40,122,0.15))",
     title: "Industrial Gas Solutions",
     desc: "Supply of oxygen, nitrogen, acetylene, argon, and propane. Plus tank inerting and comprehensive leak testing services.",
   },
   {
     icon: <FaFlask />,
-    color: "linear-gradient(135deg, rgba(122,40,122,0.1), rgba(245,157,21,0.15))",
+    color:
+      "linear-gradient(135deg, rgba(122,40,122,0.1), rgba(245,157,21,0.15))",
     title: "LPG Accessories Sales",
     desc: "Full range of gas accessories including regulators, valves, compressors, pumps, hoses, and installation materials for every application.",
   },
@@ -212,9 +233,14 @@ export default function ServicesSection() {
       <BgAccent />
       <Inner>
         <SectionLabel>What We Do</SectionLabel>
-        <SectionTitle>Complete Gas Solutions<br />Under One Roof</SectionTitle>
+        <SectionTitle>
+          Complete Gas Solutions
+          <br />
+          Under One Roof
+        </SectionTitle>
         <SectionSubtitle>
-          From LPG delivery to industrial gas installations — we handle everything with certified expertise and a relentless focus on safety.
+          From LPG delivery to industrial gas installations — we handle
+          everything with certified expertise and a relentless focus on safety.
         </SectionSubtitle>
 
         <Grid ref={ref}>
@@ -230,9 +256,9 @@ export default function ServicesSection() {
               <IconCircle $color={svc.color}>{svc.icon}</IconCircle>
               <CardTitle>{svc.title}</CardTitle>
               <CardDesc>{svc.desc}</CardDesc>
-              <CardLink>
+              {/*<CardLink>
                 Learn More <HiArrowRight />
-              </CardLink>
+              </CardLink>*/}
             </Card>
           ))}
         </Grid>
